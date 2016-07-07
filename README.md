@@ -21,5 +21,5 @@ brew rm measurement-kit
 - compile and install the `master` branch
 
 ```
-brew install --HEAD measurement-kit
+brew install --verbose --HEAD measurement-kit
 ```
