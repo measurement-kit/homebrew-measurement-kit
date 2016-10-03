@@ -3,7 +3,7 @@
 - add the tap
 
 ```
-brew tap bassosimone/measurement-kit
+brew tap measurement-kit/measurement-kit
 ```
 
 - install the latest stable
