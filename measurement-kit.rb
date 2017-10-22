@@ -1,7 +1,7 @@
 class MeasurementKit < Formula
   desc "Portable C++11 network measurement library"
   homepage "https://measurement-kit.github.io/"
-  version "v0.7.1"
+  version "v0.7.6"
   url "https://github.com/measurement-kit/measurement-kit/releases/download/v0.7.6/measurement-kit-0.7.6.tar.gz"
   sha256 "afc3f24e70c4aa89b4d5493da8a29e8242e24d8d9745dedeabea7c0db005f59a"
 
