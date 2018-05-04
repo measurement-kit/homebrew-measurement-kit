@@ -1,9 +1,16 @@
 class MingwW64Cxx11 < Formula
-  desc "Minimalist GNU for Windows and GCC cross-compilers"
+  desc "Minimalist GNU for Windows and GCC cross-compilers with C++11 support forked from mingw-w64 formula"
   homepage "https://mingw-w64.org/"
   url "https://downloads.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v5.0.3.tar.bz2"
   sha256 "2a601db99ef579b9be69c775218ad956a24a09d7dabc9ff6c5bd60da9ccc9cb4"
-  revision 3
+  revision 4
+
+  conflicts_with "mingw-w64", :because => "This is a fork that builds GCC with C++11 support"
+
+  bottle do
+    root_url "https://dl.bintray.com/measurement-kit/homebrew"
+    sha256 "38439c9ffed8a5ed77d8bcb0ae1ab991079bf5bd4ff0d3f204080370bab80cde" => :high_sierra
+  end
 
   depends_on "gmp"
   depends_on "mpfr"
