@@ -29,7 +29,7 @@ brew install <formula>
 brew rm <formula>
 ```
 
-- compile and install the `master` branch (may not work for all packages)
+- compile and install the `master` branch (may not work for all formulae)
 
 ```
 brew install --verbose --HEAD <formula>
