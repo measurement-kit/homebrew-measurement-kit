@@ -10,6 +10,7 @@ class MingwW64Cxx11 < Formula
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
     sha256 "38439c9ffed8a5ed77d8bcb0ae1ab991079bf5bd4ff0d3f204080370bab80cde" => :high_sierra
+    sha256 "f84e61f4e72a4144ff96acacc2762a1a6cb81de20153c090f211c11323df0829" => :sierra
   end
 
   depends_on "gmp"
