@@ -1,9 +1,9 @@
 class Libndt < Formula
   desc "NDT C++11 client library"
   homepage "https://measurement-kit.github.io/"
-  version "v0.24.0"
-  url "https://github.com/measurement-kit/libndt/archive/v0.24.0.tar.gz"
-  sha256 "6b973b838764579614695994b8f90f588ca191e2dd42efc1165193eccbafa396"
+  version "v0.25.1"
+  url "https://github.com/measurement-kit/libndt/archive/v0.25.1.tar.gz"
+  sha256 "42fff0e108ea816fb76218e923c8b44a02eb478b115fd7e460d7f76880b783e2"
 
   depends_on "cmake" => :build
 
