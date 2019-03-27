@@ -1,9 +1,9 @@
 class MeasurementKit < Formula
   desc "Portable C++11 network measurement library"
   homepage "https://measurement-kit.github.io/"
-  version "v0.9.1"
-  url "https://github.com/measurement-kit/measurement-kit/archive/v0.9.1.tar.gz"
-  sha256 "5a4f0ae8c9ed83f186231e4b04f25f026b8a46f4171045ef972c3d9bdc912081"
+  version "v0.10.0"
+  url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.0.tar.gz"
+  sha256 "c31ff8a457dfdbb2d42ef60f82646e508f6649107f15eec31fc22bc140ceb8e6"
 
   depends_on "libevent"
   depends_on "geoip"
