@@ -2,12 +2,9 @@
 
 Formulae that you can install using this tap:
 
-- `measurement-kit`: Measurement Kit core library
+- `libndt`: header-only C++11 library for running ndt5/ndt7 tests
 
 - `mingw-w64-cxx11`: Mingw-w64 cross-compiler with support for C++11
-
-Bottles are published in [measurement-kit/homebrew at bintray](
-https://dl.bintray.com/measurement-kit/homebrew/).
 
 ## Build and install instructions
 
