@@ -6,7 +6,9 @@ class MeasurementKit < Formula
   sha256 "04bc1832fbaa54a9fde4923e8f44a2f99610a862c228dd05977c36f54870d80f"
 
   depends_on "libevent"
-  depends_on "geoip"
+  depends_on "libmaxminddb"
+  depends_on "curl"
+
   depends_on "git" => :build
   depends_on "autoconf" => :build
   depends_on "automake" => :build
@@ -18,7 +20,7 @@ class MeasurementKit < Formula
   end
 
   def install
-    system "./autogen.sh"
+    system "./autogen.sh", "-n"
     system "./configure", "--prefix=#{prefix}", "--enable-shared"
     system "make", "V=0"
     system "make", "V=0", "install"
