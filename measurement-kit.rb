@@ -5,6 +5,11 @@ class MeasurementKit < Formula
   url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.3.tar.gz"
   sha256 "04bc1832fbaa54a9fde4923e8f44a2f99610a862c228dd05977c36f54870d80f"
 
+  bottle do
+    root_url "https://dl.bintray.com/measurement-kit/homebrew"
+    sha256 "1306666d45010bbc3ebb2eddcc849625e64551f49adbd59dd895b3f6075d1ecc" => :mojave
+  end
+
   depends_on "libevent"
   depends_on "libmaxminddb"
   #depends_on "curl" # Wrong! we want to depend on macOS's curl

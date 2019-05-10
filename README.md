@@ -42,3 +42,6 @@ brew install --verbose --HEAD <formula>
 brew install --build-bottle <formula>
 brew bottle --force-core-tap <formula>
 ```
+
+Bottles are published in [dl.bintray.com/measurement-kit/homebrew](
+https://dl.bintray.com/measurement-kit/homebrew/).
