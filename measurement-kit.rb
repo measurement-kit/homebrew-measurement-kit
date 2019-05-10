@@ -7,7 +7,7 @@ class MeasurementKit < Formula
 
   depends_on "libevent"
   depends_on "libmaxminddb"
-  depends_on "curl"
+  #depends_on "curl" # Wrong! we want to depend on macOS's curl
 
   depends_on "git" => :build
   depends_on "autoconf" => :build
