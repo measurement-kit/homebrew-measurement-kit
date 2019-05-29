@@ -2,9 +2,14 @@ class MingwW64Libressl < Formula
   desc "Version of the SSL/TLS protocol forked from OpenSSL"
   homepage "https://www.libressl.org/"
   # Please ensure when updating version the release is from stable branch.
-  url "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-2.9.1.tar.gz"
-  mirror "https://mirrorservice.org/pub/OpenBSD/LibreSSL/libressl-2.9.1.tar.gz"
-  sha256 "39e4dd856694dc10d564201e4549c46d2431601a2b10f3422507e24ccc8f62f8"
+  url "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-2.9.2.tar.gz"
+  mirror "https://mirrorservice.org/pub/OpenBSD/LibreSSL/libressl-2.9.2.tar.gz"
+  sha256 "c4c78167fae325b47aebd8beb54b6041d6f6a56b3743f4bd5d79b15642f9d5d4"
+
+  bottle do
+    root_url "https://dl.bintray.com/measurement-kit/homebrew"
+    sha256 "f6f8f3673cebdb526d9bf3779830384c68ae57c1cee507c08ec066eae7a1e2b9" => :mojave
+  end
 
   depends_on "mingw-w64" => :build
 
