@@ -1,5 +1,5 @@
 class MingwW64MeasurementKit < Formula
-  desc "Portable C++11 network measurement library"
+  desc "Network measurement engine"
   homepage "https://measurement-kit.github.io/"
   version "0.10.4"
   url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.4.tar.gz"
