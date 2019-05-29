@@ -6,7 +6,7 @@ class MingwW64Libmaxminddb < Formula
 
   depends_on "mingw-w64" => :build
 
-  keg_only :provided_by_macos  # Not very accurate
+  keg_only "Windows build that we should not install system wide"
 
   def install
 

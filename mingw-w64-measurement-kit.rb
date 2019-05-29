@@ -14,7 +14,7 @@ class MingwW64MeasurementKit < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
 
-  keg_only :provided_by_macos  # Not very accurate
+  keg_only "Windows build that we should not install system wide"
 
   def install
 

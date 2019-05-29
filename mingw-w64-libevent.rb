@@ -10,7 +10,7 @@ class MingwW64Libevent < Formula
   depends_on "pkg-config" => :build
   depends_on "mingw-w64-libressl"
 
-  keg_only :provided_by_macos  # Not very accurate
+  keg_only "Windows build that we should not install system wide"
 
   patch :DATA
 

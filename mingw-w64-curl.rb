@@ -4,7 +4,7 @@ class MingwW64Curl < Formula
   url "https://curl.haxx.se/download/curl-7.64.1.tar.bz2"
   sha256 "4cc7c738b35250d0680f29e93e0820c4cb40035f43514ea3ec8d60322d41a45d"
 
-  keg_only :provided_by_macos  # Not very accurate
+  keg_only "Windows build that we should not install system wide"
 
   depends_on "pkg-config" => :build
   depends_on "mingw-w64" => :build
