@@ -4,6 +4,11 @@ class MingwW64Libmaxminddb < Formula
   url "https://github.com/maxmind/libmaxminddb/releases/download/1.3.2/libmaxminddb-1.3.2.tar.gz"
   sha256 "e6f881aa6bd8cfa154a44d965450620df1f714c6dc9dd9971ad98f6e04f6c0f0"
 
+  bottle do
+    root_url "https://dl.bintray.com/measurement-kit/homebrew"
+    sha256 "807450658cb0d2fd320c4696febd88af706bd73e214034eb2ac43f563d70b835" => :mojave
+  end
+
   depends_on "mingw-w64" => :build
 
   keg_only "Windows build that we should not install system wide"
