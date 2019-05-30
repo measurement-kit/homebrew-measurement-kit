@@ -2,6 +2,10 @@
 
 Formulae that you can install using this tap:
 
+- `generic-assets`: generic assets used by MK;
+
+- `ios-<package>`: cross built packages for iOS systems;
+
 - `libndt`: header-only C++11 library for running ndt5/ndt7 tests;
 
 - `measurement-kit`: Measurement Kit binary, libraries and headers;
