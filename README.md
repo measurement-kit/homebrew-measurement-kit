@@ -44,4 +44,7 @@ brew bottle --force-core-tap <formula>
 ```
 
 Bottles are published in [dl.bintray.com/measurement-kit/homebrew](
-https://dl.bintray.com/measurement-kit/homebrew/).
+https://dl.bintray.com/measurement-kit/homebrew/). For some reasons, the
+bottles produced with the above procedure contains two dashes between
+the name and the version; this should be changed to a single dash in order
+for the bottle to be correctly installed.
