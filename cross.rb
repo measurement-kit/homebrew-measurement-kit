@@ -1,9 +1,9 @@
 class Cross < Formula
   desc "Cross build scripts for MK"
   homepage "https://measurement-kit.github.io/"
-  version "0.3.0"
-  url "https://github.com/measurement-kit/cross/archive/v0.3.0.tar.gz"
-  sha256 "f6e9f18bf8d39f4cb6201e2b83a260de0953f56447be8500ed363bfcc71ecf1f"
+  version "0.4.0"
+  url "https://github.com/measurement-kit/cross/archive/v0.4.0.tar.gz"
+  sha256 "7a4cb524815f9759a363f19f28cd8e496e9c6c5dedc67696e52e6ecefc37af63"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
