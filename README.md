@@ -2,6 +2,8 @@
 
 Formulae that you can install using this tap:
 
+- `android-<package>: cross built package for Android systems;
+
 - `generic-assets`: generic assets used by MK;
 
 - `ios-<package>`: cross built packages for iOS systems;
@@ -14,7 +16,7 @@ Formulae that you can install using this tap:
 default `mingw-w64` package suitable for being included in the
 binary distrbution of OONI for Windows systems.
 
-## Build and install instructions
+## Install instructions
 
 - add the tap
 
@@ -34,10 +36,20 @@ brew install <formula>
 brew rm <formula>
 ```
 
-- compile and install the `master` branch (may not work for all formulae)
+## Build and publish instructions
+
+You need to install the Android NDK first:
 
 ```
-brew install --verbose --HEAD <formula>
+brew tap homebrew/cask
+brew cask install android-sdk
+sdkmanager --install ndk-bundle
+```
+
+and/or you need to update the NDK:
+
+```
+sdkmanager --update
 ```
 
 - build a bottle
