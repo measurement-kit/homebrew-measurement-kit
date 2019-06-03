@@ -4,10 +4,11 @@ class IosMeasurementKit < Formula
   version "0.10.4"
   url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.4.tar.gz"
   sha256 "6ca0d9e7a9c1ff0ea8713bf59fde9f87365acdc4b784a5a4bb3f35a77bc4b775"
+  revision 1
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "d1b0da78606380eee0e33ce6c087c1177e680c68a211394fb881cd4e9d9097b2" => :mojave
+    sha256 "643456fda712c1c01e4aff40e1f72a2de3f48e5108e7475632380dcc34dcbf31" => :mojave
   end
 
   depends_on "ios-libevent"
