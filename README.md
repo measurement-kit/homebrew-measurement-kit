@@ -64,3 +64,9 @@ https://dl.bintray.com/measurement-kit/homebrew/). For some reasons, the
 bottles produced with the above procedure contains two dashes between
 the name and the version; this should be changed to a single dash in order
 for the bottle to be correctly installed.
+
+## Smoke testing
+
+The [measurement-kit/smoktesting](
+https://github.com/measurement-kit/smoktesting) repository contains
+scripts useful to smoke test cross built packages.
