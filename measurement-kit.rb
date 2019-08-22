@@ -1,13 +1,13 @@
 class MeasurementKit < Formula
   desc "Network measurement engine"
   homepage "https://measurement-kit.github.io/"
-  version "0.10.4"
-  url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.4.tar.gz"
-  sha256 "6ca0d9e7a9c1ff0ea8713bf59fde9f87365acdc4b784a5a4bb3f35a77bc4b775"
+  version "0.10.5"
+  url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.5.tar.gz"
+  sha256 "8b83f04f4d3c653f93bcee5a6cc5e32e6595a3feb99526017d78099fd90d4a75"
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "cbf8608a90d18e2ee35dabe5775428ac38d013b7c14e6c8c095ab373d728b7ef" => :mojave
+    sha256 "09cdbfb3b9e4328aa034df0111ffd65b1772b31e5919edd64a14dfa11e6f89f3" => :mojave
   end
 
   depends_on "libevent"
