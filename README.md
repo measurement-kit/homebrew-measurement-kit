@@ -38,7 +38,11 @@ brew rm <formula>
 
 ## Build and publish instructions
 
-You need to install the Android NDK first:
+Make sure you have a version of Java compatible with the Android SDK. We are
+currently using java8 from [AdoptOpenJDK/homebrew-openjdk](
+https://github.com/AdoptOpenJDK/homebrew-openjdk).
+
+Then you need to install the Android NDK:
 
 ```
 brew tap homebrew/cask
