@@ -1,14 +1,13 @@
 class AndroidMeasurementKit < Formula
   desc "Network measurement engine"
   homepage "https://measurement-kit.github.io/"
-  version "0.10.4"
-  url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.4.tar.gz"
-  sha256 "6ca0d9e7a9c1ff0ea8713bf59fde9f87365acdc4b784a5a4bb3f35a77bc4b775"
-  revision 2
+  version "0.10.5"
+  url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.5.tar.gz"
+  sha256 "8b83f04f4d3c653f93bcee5a6cc5e32e6595a3feb99526017d78099fd90d4a75"
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "4cb2811c29a2358c4ab289df5d631d4b9ec7cff21850bb9eae449b4affbb9c09" => :mojave
+    sha256 "073b8b1dfcab102173684e1f98e4b0e26593e7bb9326da5435b5a07d83c04436" => :mojave
   end
 
   depends_on "android-libevent"
