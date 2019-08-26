@@ -59,8 +59,8 @@ sdkmanager --update
 - build a bottle
 
 ```
-brew install --build-bottle <formula>
-brew bottle --force-core-tap <formula>
+brew install --build-bottle ./<formula>.rb
+brew bottle --force-core-tap ./<formula>.rb
 ```
 
 Bottles are published in [dl.bintray.com/measurement-kit/homebrew](
