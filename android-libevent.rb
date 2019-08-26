@@ -1,12 +1,12 @@
 class AndroidLibevent < Formula
   desc "Asynchronous event library"
   homepage "https://libevent.org/"
-  url "https://github.com/libevent/libevent/archive/release-2.1.10-stable.tar.gz"
-  sha256 "52c9db0bc5b148f146192aa517db0762b2a5b3060ccc63b2c470982ec72b9a79"
+  url "https://github.com/libevent/libevent/archive/release-2.1.11-stable.tar.gz"
+  sha256 "229393ab2bf0dc94694f21836846b424f3532585bac3468738b7bf752c03901e"
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "639fed9d745f24ab65b36f39a0f879c77a95ce596d8e1adca6cb0b507f5ee790" => :mojave
+    sha256 "6ba117b73fcb532d08eed5378c31894792a6d6832559ef8465546350a734966f" => :mojave
   end
 
   depends_on "autoconf" => :build
