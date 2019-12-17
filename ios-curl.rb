@@ -1,15 +1,15 @@
 class IosCurl < Formula
   desc "Get a file from an HTTP, HTTPS or FTP server"
   homepage "https://curl.haxx.se/"
-  url "https://curl.haxx.se/download/curl-7.65.3.tar.bz2"
-  sha256 "0a855e83be482d7bc9ea00e05bdb1551a44966076762f9650959179c89fce509"
+  url "https://curl.haxx.se/download/curl-7.67.0.tar.bz2"
+  sha256 "dd5f6956821a548bf4b44f067a530ce9445cc8094fd3e7e3fc7854815858586c"
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "eb742416884117083a5b6e8ca0a1433067a0f479f28f6eaca7d54509aa9857f3" => :mojave
+    sha256 "3b9fff81298d756074ee78e10c41fd2a7065663523a583da8914e167b4ecaf35" => :mojave
   end
 
-  keg_only "iOS build that we should not install system wide"
+  keg_only "because this is an iOS build that we should not install system wide"
 
   depends_on "pkg-config" => :build
   depends_on "cross" => :build
