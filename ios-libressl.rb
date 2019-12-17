@@ -2,20 +2,20 @@ class IosLibressl < Formula
   desc "Version of the SSL/TLS protocol forked from OpenSSL"
   homepage "https://www.libressl.org/"
   # Please ensure when updating version the release is from stable branch.
-  url "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-2.9.2.tar.gz"
-  mirror "https://mirrorservice.org/pub/OpenBSD/LibreSSL/libressl-2.9.2.tar.gz"
-  sha256 "c4c78167fae325b47aebd8beb54b6041d6f6a56b3743f4bd5d79b15642f9d5d4"
+  url "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.0.2.tar.gz"
+  mirror "https://mirrorservice.org/pub/OpenBSD/LibreSSL/libressl-3.0.2.tar.gz"
+  sha256 "df7b172bf79b957dd27ef36dcaa1fb162562c0e8999e194aa8c1a3df2f15398e"
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "5d6c27fca996a0df8a5e6454d1fad6d238b60e6eb47ca91c8f6f6002835b7ff7" => :mojave
+    sha256 "8a329e3ef1ef56eb882f23116e0f85d72aec1e1f39dc61686328efe48ea49238" => :mojave
   end
 
   depends_on "cross" => :build
   depends_on "autoconf" => :build
   depends_on "automake" => :build
 
-  keg_only "iOS build that we should not install system wide"
+  keg_only "because this is an iOS build that we should not install system wide"
 
   patch :DATA
 
