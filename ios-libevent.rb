@@ -3,6 +3,7 @@ class IosLibevent < Formula
   homepage "https://libevent.org/"
   url "https://github.com/libevent/libevent/archive/release-2.1.11-stable.tar.gz"
   sha256 "229393ab2bf0dc94694f21836846b424f3532585bac3468738b7bf752c03901e"
+  revision 1
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
