@@ -17,7 +17,7 @@ class IosLibevent < Formula
   depends_on "cross" => :build
   depends_on "ios-libressl"
 
-  keg_only "iOS build that we should not install system wide"
+  keg_only "this is an iOS build that we should not install system wide"
 
   def install
     system "./autogen.sh"

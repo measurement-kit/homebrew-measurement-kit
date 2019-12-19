@@ -3,10 +3,11 @@ class AndroidLibevent < Formula
   homepage "https://libevent.org/"
   url "https://github.com/libevent/libevent/archive/release-2.1.11-stable.tar.gz"
   sha256 "229393ab2bf0dc94694f21836846b424f3532585bac3468738b7bf752c03901e"
+  revision 1
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "6ba117b73fcb532d08eed5378c31894792a6d6832559ef8465546350a734966f" => :mojave
+    sha256 "0da9a4e811281e59e76984009271534ba9d92445aa2eced10d26ecb88ca461ff" => :mojave
   end
 
   depends_on "autoconf" => :build
@@ -16,7 +17,7 @@ class AndroidLibevent < Formula
   depends_on "cross" => :build
   depends_on "android-libressl"
 
-  keg_only "Android build that we should not install system wide"
+  keg_only "this is an Android build that we should not install system wide"
 
   def install
     ENV['ANDROID_NDK_ROOT'] = '/usr/local/share/android-sdk/ndk-bundle'
