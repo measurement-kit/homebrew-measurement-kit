@@ -2,20 +2,20 @@ class AndroidLibressl < Formula
   desc "Version of the SSL/TLS protocol forked from OpenSSL"
   homepage "https://www.libressl.org/"
   # Please ensure when updating version the release is from stable branch.
-  url "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-2.9.2.tar.gz"
-  mirror "https://mirrorservice.org/pub/OpenBSD/LibreSSL/libressl-2.9.2.tar.gz"
-  sha256 "c4c78167fae325b47aebd8beb54b6041d6f6a56b3743f4bd5d79b15642f9d5d4"
+  url "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.0.2.tar.gz"
+  mirror "https://mirrorservice.org/pub/OpenBSD/LibreSSL/libressl-3.0.2.tar.gz"
+  sha256 "df7b172bf79b957dd27ef36dcaa1fb162562c0e8999e194aa8c1a3df2f15398e"
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "ff437cde17fffe2cd79b82309229d5a5f8f7e5bd590c44d6aba478a357b52b04" => :mojave
+    sha256 "c2cc9ad3cfe11e39622e669b801fb1e4e6adec2bd24336d8855da768d0cd2c1b" => :mojave
   end
 
   depends_on "cross" => :build
   depends_on "autoconf" => :build
   depends_on "automake" => :build
 
-  keg_only "Android build that we should not install system wide"
+  keg_only "this is an Android build that we should not install system wide"
 
   patch :DATA
 
