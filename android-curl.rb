@@ -11,9 +11,9 @@ class AndroidCurl < Formula
 
   keg_only "this is an Android build that we should not install system wide"
 
-  depends_on "pkg-config" => :build
   depends_on "cross" => :build
   depends_on "android-libressl"
+  depends_on "pkg-config" => :build
 
   def install
     ENV['ANDROID_NDK_ROOT'] = '/usr/local/share/android-sdk/ndk-bundle'

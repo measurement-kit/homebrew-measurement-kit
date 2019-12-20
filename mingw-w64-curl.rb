@@ -1,38 +1,25 @@
 class MingwW64Curl < Formula
   desc "Get a file from an HTTP, HTTPS or FTP server"
   homepage "https://curl.haxx.se/"
-  url "https://curl.haxx.se/download/curl-7.65.3.tar.bz2"
-  sha256 "0a855e83be482d7bc9ea00e05bdb1551a44966076762f9650959179c89fce509"
+  url "https://curl.haxx.se/download/curl-7.67.0.tar.bz2"
+  sha256 "dd5f6956821a548bf4b44f067a530ce9445cc8094fd3e7e3fc7854815858586c"
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "4a06c287f115a3aae0ba56557a5f579a69290b50fad9865f58cdeaefaa9664d3" => :mojave
+    sha256 "d2926a655472ac085723da8c60d1442143d6cdae0ef5a4896b3f0fc3f278f04f" => :mojave
   end
 
-  keg_only "Windows build that we should not install system wide"
+  keg_only "this is a Windows build that we should not install system wide"
 
-  depends_on "pkg-config" => :build
+  depends_on "cross" => :build
   depends_on "mingw-w64" => :build
   depends_on "mingw-w64-libressl"
+  depends_on "pkg-config" => :build
 
   def install
-
-    ENV['AR'] = 'x86_64-w64-mingw32-ar'
-    ENV['AS'] = 'x86_64-w64-mingw32-as'
-    ENV['CC'] = 'x86_64-w64-mingw32-gcc'
-    ENV['CFLAGS'] = '-Wall -O2'
-    ENV['CPP'] = 'x86_64-w64-mingw32-cpp'
-    ENV['CXX'] = 'x86_64-w64-mingw32-g++'
-    ENV['CXXFLAGS'] = '-Wall -O2'
-    ENV['LD'] = 'x86_64-w64-mingw32-ld'
-    ENV['NM'] = 'x86_64-w64-mingw32-nm'
     ENV['PATH'] = '/usr/local/bin:/usr/bin:/bin'
-    ENV['RANLIB'] = 'x86_64-w64-mingw32-ranlib'
-    ENV['STRIP'] = 'x86_64-w64-mingw32-strip'
-
     args = %W[
       --disable-debug
-      --host=x86_64-w64-mingw32
       --disable-dependency-tracking
       --disable-shared
       --disable-tests
@@ -64,8 +51,7 @@ class MingwW64Curl < Formula
       --disable-threaded-resolver
       --with-ssl=/usr/local/opt/mingw-w64-libressl
     ]
-
-    system "./configure", *args
+    system "cross-mingw", "x86_64", "./configure", *args
     system "make", "install"
   end
 end
