@@ -11,9 +11,9 @@ class AndroidLibressl < Formula
     sha256 "c2cc9ad3cfe11e39622e669b801fb1e4e6adec2bd24336d8855da768d0cd2c1b" => :mojave
   end
 
-  depends_on "cross" => :build
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "cross" => :build
 
   keg_only "this is an Android build that we should not install system wide"
 
