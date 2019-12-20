@@ -15,7 +15,7 @@ class IosLibressl < Formula
   depends_on "autoconf" => :build
   depends_on "automake" => :build
 
-  keg_only "because this is an iOS build that we should not install system wide"
+  keg_only "this is an iOS build that we should not install system wide"
 
   patch :DATA
 

@@ -9,7 +9,7 @@ class IosCurl < Formula
     sha256 "3b9fff81298d756074ee78e10c41fd2a7065663523a583da8914e167b4ecaf35" => :mojave
   end
 
-  keg_only "because this is an iOS build that we should not install system wide"
+  keg_only "this is an iOS build that we should not install system wide"
 
   depends_on "pkg-config" => :build
   depends_on "cross" => :build
