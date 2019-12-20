@@ -10,12 +10,12 @@ class AndroidLibevent < Formula
     sha256 "0da9a4e811281e59e76984009271534ba9d92445aa2eced10d26ecb88ca461ff" => :mojave
   end
 
+  depends_on "android-libressl"
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "cross" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
-  depends_on "cross" => :build
-  depends_on "android-libressl"
 
   keg_only "this is an Android build that we should not install system wide"
 
