@@ -20,7 +20,7 @@ class AndroidMeasurementKit < Formula
   depends_on "libtool" => :build
   depends_on "cross" => :build
 
-  keg_only "Android build that we should not install system wide"
+  keg_only "this is an Android build that we should not install system wide"
 
   def install
     ENV['ANDROID_NDK_ROOT'] = '/usr/local/share/android-sdk/ndk-bundle'
