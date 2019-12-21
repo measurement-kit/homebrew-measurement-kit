@@ -1,13 +1,13 @@
 class IosMeasurementKit < Formula
   desc "Network measurement engine"
   homepage "https://measurement-kit.github.io/"
-  version "0.10.6"
-  url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.6.tar.gz"
-  sha256 "5ec94e522c3bc43cbf749659c18d4b13bcfbb2874db4d6b4e21b160d76dd5bd0"
+  version "0.10.7"
+  url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.7.tar.gz"
+  sha256 "abe8f2f24ed64c0fed9b439cb7f335456f11ac204a8d679c31595cdec87c6b7b"
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "96733960072822b114c1dce4f49feb80c271651583c8e5e4ad5401d88ef99ae7" => :mojave
+    sha256 "513f0f519d4ab2d455da2638b79e186124025286903cd53f3e536debe7a8c9ec" => :mojave
   end
 
   depends_on "ios-libevent"
@@ -20,7 +20,7 @@ class IosMeasurementKit < Formula
   depends_on "libtool" => :build
   depends_on "cross" => :build
 
-  keg_only "iOS build that we should not install system wide"
+  keg_only "this is an iOS build that we should not install system wide"
 
   def install
     system "./autogen.sh", "-n"
