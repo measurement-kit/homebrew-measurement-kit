@@ -1,13 +1,13 @@
 class MingwW64MeasurementKit < Formula
   desc "Network measurement engine"
   homepage "https://measurement-kit.github.io/"
-  version "0.10.7"
-  url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.7.tar.gz"
-  sha256 "abe8f2f24ed64c0fed9b439cb7f335456f11ac204a8d679c31595cdec87c6b7b"
+  version "0.10.8"
+  url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.8.tar.gz"
+  sha256 "773c0f03fa21b56b34a24f97b4fedf96e66b0f49ef549d5c674e63ed43e1c278"
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "0a6106b00ba76a49fd0801a2885263089eb7558b3263746429d8727235b55f62" => :mojave
+    sha256 "db6456dc26606f70ee2a565a8416b5028dc84b701a4cf3d2d36dbd39a6f65be5" => :mojave
   end
 
   depends_on "mingw-w64-libevent"
