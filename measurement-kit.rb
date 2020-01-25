@@ -8,6 +8,7 @@ class MeasurementKit < Formula
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
     sha256 "bf1868173b9717f8f284bb791288299931d516e44838d5eeb7b31a5dc7b192b2" => :mojave
+    sha256 "d90321774a99417208fc91afcc4824b41cc939923b77302934490e7d83d26efb" => :catalina
   end
 
   depends_on "libevent"
