@@ -9,6 +9,7 @@ class MingwW64Libressl < Formula
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
     sha256 "355eb0c9663165a4445937e1e8c274069d6d5b99c4af79e2270e03931edca809" => :mojave
+    sha256 "fad82666976f70ccce4f28ddc1eb5e155481722315bc99d1784cf2ea933a63ad" => :catalina
   end
 
   depends_on "autoconf" => :build
