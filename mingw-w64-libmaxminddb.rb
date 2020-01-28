@@ -7,6 +7,7 @@ class MingwW64Libmaxminddb < Formula
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
     sha256 "728eff5562a1850d87072e2c6e024da5450b9c71915fb46ef1232cffb8ccaa02" => :mojave
+    sha256 "e0233157378c73f19fbd7f6a1ca877edae8cbba1891e9167b5971926d9d9a084" => :catalina
   end
 
   depends_on "cross" => :build
