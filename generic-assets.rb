@@ -1,9 +1,9 @@
 class GenericAssets < Formula
   desc "Generic assets required to do Measurement Kit development"
   homepage "https://measurement-kit.github.io/"
-  version "20191226162429"
+  version "20200225143707"
   url "https://github.com/measurement-kit/generic-assets/archive/#{version}.tar.gz"
-  sha256 "62af9a0c9b22e4b9ded16f00e74774b6b916d0543fd3969bdb3259ec89286b8a"
+  sha256 "1cb122d2a68bb3ead19d623d21c337588924fe23488a02afaa013daafb70703a"
   keg_only "we don't want to install this globally"
   def install
     repoURL = "https://github.com/measurement-kit/generic-assets"
