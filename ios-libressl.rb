@@ -9,6 +9,7 @@ class IosLibressl < Formula
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
     sha256 "8a329e3ef1ef56eb882f23116e0f85d72aec1e1f39dc61686328efe48ea49238" => :mojave
+    sha256 "ff95436ae6793e1827ece3c3b57f095262c9f83bdb79390edc3163833a7e6bf0" => :catalina
   end
 
   depends_on "cross" => :build
