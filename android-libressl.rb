@@ -9,6 +9,7 @@ class AndroidLibressl < Formula
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
     sha256 "c2cc9ad3cfe11e39622e669b801fb1e4e6adec2bd24336d8855da768d0cd2c1b" => :mojave
+    sha256 "39e9d605f1b508ec6876a2a006c34f24fb3c2c2c4667ab37b305598e841ecd2f" => :catalina
   end
 
   depends_on "autoconf" => :build
