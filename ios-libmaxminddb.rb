@@ -7,6 +7,7 @@ class IosLibmaxminddb < Formula
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
     sha256 "e9011913ae7bde1f94951dbfcb07632ca758bcbfd14b6cd6b639ac007dbca6b6" => :mojave
+    sha256 "601e2e465aefeff8e86b6a7f826f0041ee2dad9d24495a163832272de83514a6" => :catalina
   end
 
   depends_on "cross" => :build
