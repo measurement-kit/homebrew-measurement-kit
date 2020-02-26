@@ -5,11 +5,11 @@ class MingwW64Libressl < Formula
   url "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.0.2.tar.gz"
   mirror "https://mirrorservice.org/pub/OpenBSD/LibreSSL/libressl-3.0.2.tar.gz"
   sha256 "df7b172bf79b957dd27ef36dcaa1fb162562c0e8999e194aa8c1a3df2f15398e"
+  revision 2
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "355eb0c9663165a4445937e1e8c274069d6d5b99c4af79e2270e03931edca809" => :mojave
-    sha256 "fad82666976f70ccce4f28ddc1eb5e155481722315bc99d1784cf2ea933a63ad" => :catalina
+    sha256 "8411c534c388091defa1b6dcadc1c909f463d1050455d2837a335be9b2d45d1b" => :catalina
   end
 
   depends_on "autoconf" => :build
