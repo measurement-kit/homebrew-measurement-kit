@@ -1,18 +1,18 @@
 class MingwW64MeasurementKit < Formula
   desc "Network measurement engine"
   homepage "https://measurement-kit.github.io/"
-  version "0.10.8"
-  url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.8.tar.gz"
-  sha256 "773c0f03fa21b56b34a24f97b4fedf96e66b0f49ef549d5c674e63ed43e1c278"
+  version "0.10.11"
+  url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.11.tar.gz"
+  sha256 "f9dbf5f721516fd709c13ac5011737b3622076299e3c899a1f70861901ec1b40"
+  revision 1
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "db6456dc26606f70ee2a565a8416b5028dc84b701a4cf3d2d36dbd39a6f65be5" => :mojave
+    sha256 "46e5ddebf1b6b4a396e058f85137c1d39ebede628ec645f392ca6094e9149327" => :catalina
   end
 
   depends_on "mingw-w64-libevent"
   depends_on "mingw-w64-libmaxminddb"
-  depends_on "mingw-w64-curl"
 
   depends_on "cross" => :build
   depends_on "autoconf" => :build
@@ -39,7 +39,7 @@ class MingwW64MeasurementKit < Formula
                           "--disable-dependency-tracking",
                           "--with-libevent=/usr/local/opt/mingw-w64-libevent",
                           "--with-openssl=/usr/local/opt/mingw-w64-libressl",
-                          "--with-libcurl=/usr/local/opt/mingw-w64-curl",
+                          "--with-libcurl=no",
                           "--with-libmaxminddb=/usr/local/opt/mingw-w64-libmaxminddb"
     system "make", "V=0"
     system "make", "V=0", "install"
