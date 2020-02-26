@@ -3,12 +3,11 @@ class MingwW64Libevent < Formula
   homepage "https://libevent.org/"
   url "https://github.com/libevent/libevent/archive/release-2.1.11-stable.tar.gz"
   sha256 "229393ab2bf0dc94694f21836846b424f3532585bac3468738b7bf752c03901e"
-  revision 1
+  revision 3
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "2086a3033e509145225dbe54904142a21e0c27dd433802ab291307f7592ab6f0" => :mojave
-    sha256 "73f051ee1c326ed90e57be933c30e07db61737a8cee9f87843010550327a5237" => :catalina
+    sha256 "c66e78260c3564e54af1e0299dec0cfe0b3af12a041bb433ad706e37ae66df7a" => :catalina
   end
 
   depends_on "autoconf" => :build
