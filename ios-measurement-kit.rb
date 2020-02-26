@@ -1,13 +1,13 @@
 class IosMeasurementKit < Formula
   desc "Network measurement engine"
   homepage "https://measurement-kit.github.io/"
-  version "0.10.8"
-  url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.8.tar.gz"
-  sha256 "773c0f03fa21b56b34a24f97b4fedf96e66b0f49ef549d5c674e63ed43e1c278"
+  version "0.10.11"
+  url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.11.tar.gz"
+  sha256 "f9dbf5f721516fd709c13ac5011737b3622076299e3c899a1f70861901ec1b40"
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "c7608d384a1d56f2f9dbd210763d98e6457ac3eabafb0675089c5b13e4bf7186" => :mojave
+    sha256 "f292692a1b653bed4d3e598bf8348883a1fed2e1d96b0ffa599c6af086d4004a" => :catalina
   end
 
   depends_on "ios-libevent"
@@ -21,6 +21,8 @@ class IosMeasurementKit < Formula
   depends_on "cross" => :build
 
   keg_only "this is an iOS build that we should not install system wide"
+
+  patch :DATA
 
   def install
     system "./autogen.sh", "-n"
@@ -38,3 +40,57 @@ class IosMeasurementKit < Formula
     end
   end
 end
+__END__
+From 374049c98b61ce3625552c92d152a2c53055b05c Mon Sep 17 00:00:00 2001
+From: Simone Basso <bassosimone@gmail.com>
+Date: Wed, 26 Feb 2020 20:49:21 +0100
+Subject: [PATCH] Makefile.am: don't build libtest.la by default
+
+We will pick it up automatically when we build tests. So, no need to
+explicitly list it as something to build. Fixes cross compiling for
+iOS, where catch.hpp is clearly not prepared for that:
+
+```
+==> ./autogen.sh -n
+==> cross-ios i386 ../configure --prefix=/usr/local/Cellar/ios-measurement-kit/0.10.11/i386 --disable-shared --disable-depen
+==> make V=0 install
+==> cross-ios x86_64 ../configure --prefix=/usr/local/Cellar/ios-measurement-kit/0.10.11/x86_64 --disable-shared --disable-d
+==> make V=0 install
+==> cross-ios armv7s ../configure --prefix=/usr/local/Cellar/ios-measurement-kit/0.10.11/armv7s --disable-shared --disable-d
+==> make V=0 install
+Last 15 lines from /Users/sbs/Library/Logs/Homebrew/ios-measurement-kit/07.make:
+In file included from ../test/main.cpp:1:
+../include/private/catch.hpp:8182:13: error: cannot determine Thumb instruction size, use inst.n/inst.w instead
+            CATCH_BREAK_INTO_DEBUGGER();
+            ^
+../include/private/catch.hpp:7894:79: note: expanded from macro 'CATCH_BREAK_INTO_DEBUGGER'
+    #define CATCH_BREAK_INTO_DEBUGGER() []{ if( Catch::isDebuggerActive() ) { CATCH_TRAP(); } }()
+                                                                              ^
+../include/private/catch.hpp:7872:39: note: expanded from macro 'CATCH_TRAP'
+        #define CATCH_TRAP()  __asm__(".inst 0xe7f001f0")
+                                      ^
+<inline asm>:1:2: note: instantiated into assembly here
+        .inst 0xe7f001f0
+        ^
+1 error generated.
+make: *** [test/libtest_main_la-main.lo] Error 1
+```
+---
+ Makefile.am | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index 5a8e9417..58199c28 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -13,7 +13,6 @@ measurement_kit_SOURCES       = # Empty
+ bin_PROGRAMS = measurement_kit
+ measurement_kit_LDADD = libmeasurement_kit.la
+ 
+-noinst_LTLIBRARIES       = libtest_main.la
+ libtest_main_la_CPPFLAGS = -DCATCH_CONFIG_MAIN
+ libtest_main_la_SOURCES  = test/main.cpp
+ 
+-- 
+2.25.0
+
