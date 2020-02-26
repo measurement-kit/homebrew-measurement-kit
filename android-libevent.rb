@@ -8,6 +8,7 @@ class AndroidLibevent < Formula
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
     sha256 "0da9a4e811281e59e76984009271534ba9d92445aa2eced10d26ecb88ca461ff" => :mojave
+    sha256 "316407237389554c19ec5bb3937f702dfb42f27dbfe381d5038ba1a4dcbfe2a5" => :catalina
   end
 
   depends_on "android-libressl"
