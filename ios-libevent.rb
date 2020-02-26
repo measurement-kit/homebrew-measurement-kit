@@ -8,6 +8,7 @@ class IosLibevent < Formula
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
     sha256 "be69f25e253446a4b910565f863339a71c4290abe42dfe84614c952e4ddfa26e" => :mojave
+    sha256 "baa073fd4fbdc1f0e494130bb9f574d8482fd30028c775bdf281725961c1e3c8" => :catalina
   end
 
   depends_on "autoconf" => :build
