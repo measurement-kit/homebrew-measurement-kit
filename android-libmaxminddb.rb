@@ -3,11 +3,12 @@ class AndroidLibmaxminddb < Formula
   homepage "https://github.com/maxmind/libmaxminddb"
   url "https://github.com/maxmind/libmaxminddb/releases/download/1.4.2/libmaxminddb-1.4.2.tar.gz"
   sha256 "dd582aa971be23dee960ec33c67fb5fd38affba508e6f00ea75959dbd5aad156"
+  revision 1
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "3e0d465a72fc59a75236a62f35dc885262570f3522b028dd6ccb0fdcce2e7056" => :mojave
-    sha256 "e5d0e5e9ec3bff2044559b9580bcd58abc28078a7f223668c2bf35096a48e6e5" => :catalina
+    cellar :any_skip_relocation
+    sha256 "cb86bdde496af04e244caabc268fa7f689a0386729ef32a8b4747a910b0d7fe5" => :catalina
   end
 
   depends_on "cross" => :build
