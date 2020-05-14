@@ -6,7 +6,7 @@ class AndroidCurl < Formula
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "673021e3225a1628785e499d3c1aee0aa9960d017460e7904b6a1c0cebeb2636"
+    sha256 "673021e3225a1628785e499d3c1aee0aa9960d017460e7904b6a1c0cebeb2636" => :catalina
   end
 
   keg_only "this is an Android build that we should not install system wide"
