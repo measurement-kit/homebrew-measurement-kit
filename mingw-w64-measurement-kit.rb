@@ -4,11 +4,12 @@ class MingwW64MeasurementKit < Formula
   version "0.10.11"
   url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.11.tar.gz"
   sha256 "f9dbf5f721516fd709c13ac5011737b3622076299e3c899a1f70861901ec1b40"
-  revision 1
+  revision 2
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "46e5ddebf1b6b4a396e058f85137c1d39ebede628ec645f392ca6094e9149327" => :catalina
+    cellar :any_skip_relocation
+    sha256 "d369cddcd5c2495b19cecbf1b1dfbccf3d0d5aefc66c69ab0fc93b6028d03a16" => :catalina
   end
 
   depends_on "mingw-w64-libevent"
