@@ -4,10 +4,12 @@ class IosMeasurementKit < Formula
   version "0.10.11"
   url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.11.tar.gz"
   sha256 "f9dbf5f721516fd709c13ac5011737b3622076299e3c899a1f70861901ec1b40"
+  revision 1
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "f292692a1b653bed4d3e598bf8348883a1fed2e1d96b0ffa599c6af086d4004a" => :catalina
+    cellar :any_skip_relocation
+    sha256 "03e6467ded317f7712d04e34d46893724edb9477fa1466cfc9f2d92e406ed511" => :catalina
   end
 
   depends_on "ios-libevent"
@@ -25,6 +27,7 @@ class IosMeasurementKit < Formula
   patch :DATA
 
   def install
+    ENV['PATH'] = '/usr/local/bin:/usr/bin:/bin'
     system "./autogen.sh", "-n"
     [ "i386", "x86_64", "armv7s", "arm64" ].each do |arch|
       mkdir "build-#{arch}" do
