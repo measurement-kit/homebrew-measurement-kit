@@ -2,14 +2,13 @@ class IosLibressl < Formula
   desc "Version of the SSL/TLS protocol forked from OpenSSL"
   homepage "https://www.libressl.org/"
   # Please ensure when updating version the release is from stable branch.
-  url "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.0.2.tar.gz"
-  mirror "https://mirrorservice.org/pub/OpenBSD/LibreSSL/libressl-3.0.2.tar.gz"
-  sha256 "df7b172bf79b957dd27ef36dcaa1fb162562c0e8999e194aa8c1a3df2f15398e"
+  url "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.1.1.tar.gz"
+  mirror "https://mirrorservice.org/pub/OpenBSD/LibreSSL/libressl-3.1.1.tar.gz"
+  sha256 "bdc6ce5ebb3a2eafc4c475f7eeaa5f0a8e60d9bead01efb76e2e254242b6db00"
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "8a329e3ef1ef56eb882f23116e0f85d72aec1e1f39dc61686328efe48ea49238" => :mojave
-    sha256 "ff95436ae6793e1827ece3c3b57f095262c9f83bdb79390edc3163833a7e6bf0" => :catalina
+    sha256 "c86f755855122fc38999c96f732a4dcd4df00c61c5be5d963284e65c1a21c00e" => :catalina
   end
 
   depends_on "cross" => :build
@@ -52,11 +51,8 @@ index 48da18b..9164e20 100644
 --- a/Makefile.am
 +++ b/Makefile.am
 @@ -1,4 +1,4 @@
--SUBDIRS = crypto ssl tls include apps tests man
+-SUBDIRS = crypto ssl tls include apps man
 +SUBDIRS = crypto ssl include
- ACLOCAL_AMFLAGS = -I m4
- 
- pkgconfigdir = $(libdir)/pkgconfig
--- 
-2.8.1
-
+ if ENABLE_TESTS
+ SUBDIRS += tests
+ endif
