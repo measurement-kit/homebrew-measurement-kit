@@ -1,12 +1,13 @@
 class IosCurl < Formula
   desc "Get a file from an HTTP, HTTPS or FTP server"
   homepage "https://curl.haxx.se/"
-  url "https://curl.haxx.se/download/curl-7.68.0.tar.bz2"
-  sha256 "207f54917dd6a2dc733065ccf18d61bb5bebeaceb5df49cd9445483e8623eeb9"
+  url "https://curl.haxx.se/download/curl-7.70.0.tar.xz"
+  sha256 "032f43f2674008c761af19bf536374128c16241fb234699a55f9fb603fcfbae7"
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "3cfb441a4a7db4a89d8df2c261ab616e9921bdaa9ac2ff50bfa026182163b043" => :catalina
+    cellar :any_skip_relocation
+    sha256 "55a35d1a6164a35fef1060850217ff9b2d693ce0df66cc84d94ade3e8e76e9d9" => :catalina
   end
 
   keg_only "this is an iOS build that we should not install system wide"
@@ -16,6 +17,7 @@ class IosCurl < Formula
   depends_on "ios-libressl"
 
   def install
+    ENV['PATH'] = '/usr/local/bin:/usr/bin:/bin'
     [ "i386", "x86_64", "armv7s", "arm64" ].each do |arch|
       mkdir "build-#{arch}" do
         args = %W[
