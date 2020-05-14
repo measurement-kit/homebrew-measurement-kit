@@ -3,11 +3,12 @@ class MingwW64Libmaxminddb < Formula
   homepage "https://github.com/maxmind/libmaxminddb"
   url "https://github.com/maxmind/libmaxminddb/releases/download/1.4.2/libmaxminddb-1.4.2.tar.gz"
   sha256 "dd582aa971be23dee960ec33c67fb5fd38affba508e6f00ea75959dbd5aad156"
-  revision 2
+  revision 3
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "1ddcd866b90fd603623605453fb18c498c157fdf04ab09183676b98a76fbe54d" => :catalina
+    cellar :any_skip_relocation
+    sha256 "2943f8c0f37a53c25e92891b07c76edb758241d7ef4646fcb6417e11631529b4" => :catalina
   end
 
   depends_on "cross" => :build
