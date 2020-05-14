@@ -4,10 +4,12 @@ class AndroidMeasurementKit < Formula
   version "0.10.11"
   url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.11.tar.gz"
   sha256 "f9dbf5f721516fd709c13ac5011737b3622076299e3c899a1f70861901ec1b40"
+  revision 1
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "075d6b12aa115fdff7bccaba656c18aafe80aa96960b7385c2147cc78e402a50" => :catalina
+    cellar :any_skip_relocation
+    sha256 "2fbe08f398d2c62190937aa3e7e3ec4682bb10631146ef4673195f1316bac630" => :catalina
   end
 
   depends_on "android-libevent"
