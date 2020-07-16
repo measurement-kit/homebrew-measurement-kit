@@ -2,13 +2,13 @@ class AndroidLibressl < Formula
   desc "Version of the SSL/TLS protocol forked from OpenSSL"
   homepage "https://www.libressl.org/"
   # Please ensure when updating version the release is from stable branch.
-  url "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.1.1.tar.gz"
-  mirror "https://mirrorservice.org/pub/OpenBSD/LibreSSL/libressl-3.1.1.tar.gz"
-  sha256 "bdc6ce5ebb3a2eafc4c475f7eeaa5f0a8e60d9bead01efb76e2e254242b6db00"
+  url "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.1.3.tar.gz"
+  mirror "https://mirrorservice.org/pub/OpenBSD/LibreSSL/libressl-3.1.3.tar.gz"
+  sha256 "c76b0316acf612ecb62f5cb014a20d972a663bd9e40abf952a86f3b998b69fa0"
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "c40feb21a3769ca4caa8d9a097cd46a16986ede71903715fc5219afe9434de5e" => :catalina
+    sha256 "581298794bf5a3c3deb44ee75e99a4fbe6bbb4c28495bc77ff0ade48adb2c7fb" => :catalina
   end
 
   depends_on "autoconf" => :build
