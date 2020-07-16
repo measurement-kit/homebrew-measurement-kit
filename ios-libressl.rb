@@ -2,18 +2,19 @@ class IosLibressl < Formula
   desc "Version of the SSL/TLS protocol forked from OpenSSL"
   homepage "https://www.libressl.org/"
   # Please ensure when updating version the release is from stable branch.
-  url "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.1.1.tar.gz"
-  mirror "https://mirrorservice.org/pub/OpenBSD/LibreSSL/libressl-3.1.1.tar.gz"
-  sha256 "bdc6ce5ebb3a2eafc4c475f7eeaa5f0a8e60d9bead01efb76e2e254242b6db00"
+  url "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.1.3.tar.gz"
+  mirror "https://mirrorservice.org/pub/OpenBSD/LibreSSL/libressl-3.1.3.tar.gz"
+  sha256 "c76b0316acf612ecb62f5cb014a20d972a663bd9e40abf952a86f3b998b69fa0"
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "c86f755855122fc38999c96f732a4dcd4df00c61c5be5d963284e65c1a21c00e" => :catalina
+    cellar :any_skip_relocation
+    sha256 "94e45caaa9df5d4a10e50105cdb2a9c8a58f5da18893d3b68743d4170bae6a73" => :catalina
   end
 
-  depends_on "cross" => :build
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "cross" => :build
 
   keg_only "this is an iOS build that we should not install system wide"
 
