@@ -1,12 +1,12 @@
 class AndroidCurl < Formula
   desc "Get a file from an HTTP, HTTPS or FTP server"
   homepage "https://curl.haxx.se/"
-  url "https://curl.haxx.se/download/curl-7.70.0.tar.xz"
-  sha256 "032f43f2674008c761af19bf536374128c16241fb234699a55f9fb603fcfbae7"
+  url "https://curl.haxx.se/download/curl-7.71.1.tar.xz"
+  sha256 "40f83eda27cdbeb25cd4da48cefb639af1b9395d6026d2da1825bf059239658c"
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    sha256 "673021e3225a1628785e499d3c1aee0aa9960d017460e7904b6a1c0cebeb2636" => :catalina
+    sha256 "471e5d46183fe25d6b514ac1d79354c130a71a2a80abccec870635b54ff23dd2" => :catalina
   end
 
   keg_only "this is an Android build that we should not install system wide"
