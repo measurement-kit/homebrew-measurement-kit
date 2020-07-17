@@ -1,22 +1,21 @@
 class MingwW64Libevent < Formula
   desc "Asynchronous event library"
   homepage "https://libevent.org/"
-  url "https://github.com/libevent/libevent/archive/release-2.1.11-stable.tar.gz"
-  sha256 "229393ab2bf0dc94694f21836846b424f3532585bac3468738b7bf752c03901e"
-  revision 4
+  url "https://github.com/libevent/libevent/archive/release-2.1.12-stable.tar.gz"
+  sha256 "7180a979aaa7000e1264da484f712d403fcf7679b1e9212c4e3d09f5c93efc24"
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
     cellar :any_skip_relocation
-    sha256 "e0ab41754244b0be8a075a77dca9e335d653891cc237db0042817a1a157afa2d" => :catalina
+    sha256 "de487ac1f00d72a2d4748b51afed4a9e0ea31cdd7ab3e8477aa507d8a76292e6" => :catalina
   end
 
+  depends_on "mingw-w64-libressl"
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "cross" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
-  depends_on "mingw-w64-libressl"
 
   keg_only "this is a Windows build that we should not install system wide"
 
