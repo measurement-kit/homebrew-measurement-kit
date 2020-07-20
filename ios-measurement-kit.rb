@@ -1,15 +1,14 @@
 class IosMeasurementKit < Formula
   desc "Network measurement engine"
   homepage "https://measurement-kit.github.io/"
-  version "0.10.11"
-  url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.11.tar.gz"
-  sha256 "f9dbf5f721516fd709c13ac5011737b3622076299e3c899a1f70861901ec1b40"
-  revision 1
+  version "0.10.12"
+  url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.12.tar.gz"
+  sha256 "508d9db72579efbe4747dd791771f47299bc5867c72d67a86e371d66d20fd19e"
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
     cellar :any_skip_relocation
-    sha256 "03e6467ded317f7712d04e34d46893724edb9477fa1466cfc9f2d92e406ed511" => :catalina
+    sha256 "f25c088aa35274c29d23378f782b36f8ca4789e4ff093b38e55ac1388dc04f58" => :catalina
   end
 
   depends_on "ios-libevent"
