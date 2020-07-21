@@ -1,15 +1,14 @@
 class MingwW64MeasurementKit < Formula
   desc "Network measurement engine"
   homepage "https://measurement-kit.github.io/"
-  version "0.10.11"
-  url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.11.tar.gz"
-  sha256 "f9dbf5f721516fd709c13ac5011737b3622076299e3c899a1f70861901ec1b40"
-  revision 2
+  version "0.10.12"
+  url "https://github.com/measurement-kit/measurement-kit/archive/v0.10.12.tar.gz"
+  sha256 "508d9db72579efbe4747dd791771f47299bc5867c72d67a86e371d66d20fd19e"
 
   bottle do
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
     cellar :any_skip_relocation
-    sha256 "d369cddcd5c2495b19cecbf1b1dfbccf3d0d5aefc66c69ab0fc93b6028d03a16" => :catalina
+    sha256 "97eaee1daefcdb3fb289569a1cd1e2f4da25475108caaeda7cbaf2187f827e92" => :catalina
   end
 
   depends_on "mingw-w64-libevent"
@@ -22,6 +21,8 @@ class MingwW64MeasurementKit < Formula
   depends_on "libtool" => :build
 
   keg_only "this is a Windows build that we should not install system wide"
+
+  patch :DATA
 
   def install
 
@@ -46,3 +47,23 @@ class MingwW64MeasurementKit < Formula
     system "make", "V=0", "install"
   end
 end
+__END__
+We need to link with iphlpapi for if_nametoindex in libevent 2.1.12.
+
+See https://github.com/measurement-kit/measurement-kit/pull/1930.
+
+diff --git a/configure.ac b/configure.ac
+index 29ff69bb..13c1bb8a 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -13,8 +13,8 @@ AC_PROG_INSTALL
+ 
+ case "$host" in
+   *-w64-mingw32)
+-    # Must link with ws2_32
+-    LIBS="$LIBS -lws2_32"
++    # Must link with ws2_32 and iphlpapi for if_nametoindex (since libevent 2.1.12)
++    LIBS="$LIBS -lws2_32 -liphlpapi"
+     # Required to expose inet_pton()
+     CPPFLAGS="$CPPFLAGS -D_WIN32_WINNT=0x0600 -D_POSIX_C_SOURCE"
+   ;;
