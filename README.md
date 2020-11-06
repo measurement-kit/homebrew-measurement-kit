@@ -2,7 +2,7 @@
 
 Formulae that you can install using this tap:
 
-- `android-<package>: cross built package for Android systems;
+- `android-<package>`: cross built package for Android systems;
 
 - `generic-assets`: generic assets used by MK;
 
