@@ -1,4 +1,4 @@
-class Ooniprobe2 < Formula
+class Ooniprobe < Formula
   include Language::Python::Virtualenv
   desc "Network interference detection tool (version 2)"
   homepage "https://ooni.org/"
@@ -10,9 +10,8 @@ class Ooniprobe2 < Formula
   bottle do
     cellar :any
     root_url "https://dl.bintray.com/measurement-kit/homebrew"
-    # This is the original bottle from homebrew repackaged such that the installation
-    # directory prefix is ooniprobe2 rather than ooniprobe.
-    sha256 "329ceb241288a9e2c2ec0bee339472e6cdb8e1c805179632c30d3e1e5e6c0b4b" => :catalina
+    # This is the original bottle from homebrew:
+    sha256 "9a5d8c8b6bda3609642113631ba7c39b2cbf4fc27b09bd4b2fccc832befdd3e5" => :catalina
   end
 
   depends_on "geoip"
